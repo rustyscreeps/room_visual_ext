@@ -4,7 +4,6 @@ version = "0.1.0"
 authors = ["Xilexio <xilexio@xilexio.eu.org>"]
 edition = "2021"
 license = "MIT"
-license-file = "LICENSE"
 readme = "README.md"
 homepage = "https://github.com/rustyscreeps/room_visual_ext"
 documentation = "https://github.com/rustyscreeps/room_visual_ext"
