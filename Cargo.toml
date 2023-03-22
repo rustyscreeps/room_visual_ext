@@ -1,0 +1,31 @@
+[package]
+name = "room_visual_ext"
+version = "0.1.0"
+authors = ["Xilexio <xilexio@xilexio.eu.org>"]
+edition = "2021"
+license = "MIT"
+license-file = "LICENSE"
+readme = "README.md"
+homepage = "https://github.com/rustyscreeps/room_visual_ext"
+documentation = "https://github.com/rustyscreeps/room_visual_ext"
+repository = "https://github.com/rustyscreeps/room_visual_ext.git"
+description = "Additional visualization utilities for Screeps: World"
+keywords = ["screeps", "visualization"]
+categories = ["visualization"]
+
+[lib]
+name = "room_visual_ext"
+
+[dependencies]
+screeps-game-api = "0.10"
+
+[profile.release]
+panic = "abort"
+opt-level = 3
+lto = true
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-O4"]
+
+[features]
+default = []
