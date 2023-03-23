@@ -27,6 +27,11 @@ Use opacity 1.0 for opaque visualization and a smaller, positive value for parti
 Small visual artifacts will appear in partially transparent visualizations. 
 ```rust
 room_visual_ext.structure(42.0, 42.0, StructureType::Spawn, 1.0);
+room_visual_ext.structure_roomxy(
+    unsafe { RoomXY::unchecked_new(42u8, 42u8) },
+    StructureType::Rampart,
+    1.0
+);
 ```
 3. You may also call any `RoomVisual` method directly from the `RoomVisualExt` object.
 4. You may not use the object in the next game tick since it becomes invalid just like `RoomVisual`.
@@ -38,9 +43,9 @@ For results like in the game, place roads before containers that are on them and
 Below is an example showcasing visualization of all supported structures at opacities 1.0 and 0.5.
 For comparison, we present how they look in the actual game.
 
-[TODO image]
+![Screenshot of showcase of RoomVisualExt in-game](room_visual_ext_example.png)
 
-You may find the code used to produce these visualizations in the `example.rs` file. [TODO add the example]
+You may find the code used to produce these visualizations in the `examples/showcase.rs` file.
 
 ## Project history
 

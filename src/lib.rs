@@ -31,8 +31,8 @@ const POWER_COLOR: &str = "#F53547";
 const ROAD_COLOR: &str = "#666666";
 const WHITE_COLOR: &str = "#FFFFFF";
 const BLACK_COLOR: &str = "#000000";
-const RAMPART_COLOR: &str = "#434C43";
-const RAMPART_OUTLINE_COLOR: &str = "#5D735F";
+const RAMPART_COLOR: &str = "#669966";
+const RAMPART_OUTLINE_COLOR: &str = "#66CC66";
 const FACTORY_OUTER_CIRCLE_FILL_COLOR: &str = "#232323";
 const FACTORY_PARTS_COLOR: &str = "#140a0a";
 const FACTORY_LEVEL_CIRCLE_FILL_COLOR: &str = "#302a2a";
@@ -171,7 +171,7 @@ impl RoomVisualExt {
                     .fill(RAMPART_COLOR)
                     .stroke(RAMPART_OUTLINE_COLOR)
                     .stroke_width(0.07)
-                    .opacity(opacity * 0.5);
+                    .opacity(opacity * 0.3);
                 self.rect(x - 0.5, y - 0.5, 1.0, 1.0, Some(rampart_rect_style));
             }
             StructureType::Link => {
@@ -591,5 +591,9 @@ impl RoomVisualExt {
             }
             _ => {}
         };
+    }
+
+    pub fn structure_roomxy(&mut self, xy: RoomXY, structure_type: StructureType, opacity: f32) {
+        self.structure(xy.x.u8() as f32, xy.y.u8() as f32, structure_type, opacity)
     }
 }
