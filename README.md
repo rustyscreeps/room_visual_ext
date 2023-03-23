@@ -5,7 +5,7 @@ written in Rust for [Rust bots](https://github.com/rustyscreeps/screeps-game-api
 
 ## Installation
 
-Add a dependency in our `Cargo.toml`:
+Add a dependency to your `Cargo.toml`:
 ```
 [dependencies]
 room_visual_ext = "0.1.0"
@@ -54,7 +54,7 @@ Originally, a JS version of these visualizations was published on Screeps Slack 
 Nowadays, it may be found in the [screepers repo](https://github.com/screepers/RoomVisual).
 Most of the values for colors and shapes of structures come from screepers' RoomVisual.
 
-However, this version has some notable changes:
+This Rust version has some notable changes:
 * implemented extractor,
 * square constructed walls and ramparts to improve the visibility,
 * transparent ramparts (50% of the base opacity) to enable seeing what is below,
