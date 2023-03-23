@@ -124,7 +124,7 @@ pub fn game_loop() {
         room_visual_ext.structure(15f32 + x_offset, 17f32, StructureType::Wall, opacity);
     }
 
-    let spawn = game::spawns().values().next().unwrap_throw();
+    let spawn = game::spawns().values().next().unwrap();
     spawn.pos();
     let room_name = spawn.room().map(|r| r.name());
     let mut room_visual_ext = RoomVisualExt::new(room_name.unwrap());
